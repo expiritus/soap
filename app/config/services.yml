@@ -1,0 +1,9 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    hello_service:
+        class: Soap\ServerBundle\Services\HelloService
+        arguments: ["@doctrine.orm.default_entity_manager"]

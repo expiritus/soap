@@ -1,0 +1,12 @@
+soap_server_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SoapServerBundle:Default:index }
+
+server:
+    path:     /server
+    defaults: { _controller: SoapServerBundle:HelloService:server }
+
+
+client:
+    path:     /server/{name}.{_format}
+    defaults: { _controller: SoapServerBundle:HelloService:client }
